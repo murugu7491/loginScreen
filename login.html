@@ -1,0 +1,55 @@
+<!DOCTYPe html>
+<html lang = "en-us">
+
+<head>
+<title> Login Screen </title>
+<meta charset = "UTF-8"/>
+<meta name = "viewport" content = "max-width = device-width initial-scale = 1.0"/>
+<style>
+  .sub {
+  margin-left: 100px;
+  
+  }
+
+  #firstName {
+  word-spacing:0px;
+  }
+  * {
+  background-color: smokegrey;
+  color: red;
+  }
+  .col {
+  color: black;
+  }
+
+</style>
+
+</head>
+
+<body>
+<form action = "///home/murugu/Desktop/php/login.php" target = "_blank">
+<label for = "firstName">Username </label>
+<input type = "text" id = "firstName" placeholder = "Enter User Name" class = "col" name ="Username" /></br></br>
+<label for = "password">Password</password>
+<input type = "text" id = "password" placeholder = "Enter Password" class = "col"/></br></br>
+<button onclick = "myFun()" class = "sub"> Submit </button>
+<p id = "demo"></p>
+<!  <input type = "submit" value = "Submit" class = "sub" onclick= "myFun()"> 
+<script>  
+function myFun() {
+const fname = document.getElementById("firstName").value;
+if (fname.match(' ')) {
+document.getElementById("demo").innerHTML = "Username is " +fname;
+}
+else {
+alert ("Space is missing");
+}
+}
+
+</script>
+</form>
+
+
+
+</body>
+</html>
